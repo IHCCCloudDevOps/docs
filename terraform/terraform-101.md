@@ -6,7 +6,7 @@ In practice, this means you can type Terraform commands in your console to verif
 Here are some of the basic Terraform commands and what they do.
 
 ## Terraform Commands
-`terraform init
+`terraform init`
 
 Initializes terraform in the current directory. This sets up terraform by downloading any necessary `providers`.
 
