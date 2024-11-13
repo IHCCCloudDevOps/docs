@@ -33,6 +33,8 @@ The naming convention for the first Terraform file is `main.tf`. But name it som
 
 Use your IDE of choice (Visual Studio Code works great) and create a new file called `main.tf`. Just make sure it has that `.tf` extension.
 
+Before writing this file you will be
+
 ## 3. Lambda Function Code
 
 You should have already taken the Cloud Foundations course and know what an AWS Lambda Function is, but you may not know how to write one.
@@ -50,7 +52,7 @@ def lambda_handler(event, context):
    }
 ```
 
-This function has the ability to accept a name in JSON, and spit back out a custom message. Cool.
+This function has the ability to accept a name in JSON, and spit back out a custom message. Cool. In the future we'll develop code to actually do stuff.
 
 ## 4. Download the AWS Provider
 
