@@ -3,10 +3,13 @@
 To connect to an AWS account and interact with resources using AWS CLI you must first establish credentials locally.  
 
 1. Sign-in to the AWS apps portal provided to you by your instructor.
+   ![See keys in aws portal](awsportalkeys.PNG)
 2. Select the role associated with this course and select the Access Keys button to see the keys to configure.
+   ![AWS access keys](awskeys.png)
 3. In your terminal, type the command ‘aws configure’ and fill in the responses with your keys.
 4. For default region, choose us-east-1
 5. For default output format, choose json 
+   ![AWS configure](awsconfigure.png)
 
 Running the `aws configure` command and filling it out will create a file called credentials in your `user/.aws directory.` Open this file to verify your credentials. 
 
