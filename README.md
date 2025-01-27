@@ -3,4 +3,5 @@ Resources for the Cloud DevOps course (or just DevOpsy people, y'all can come ch
 
 - [AWS CLI](awscli/README.md)
 - [Terraform](terraform/README.md)
+- [AWS Services](aws/README.md)
   
