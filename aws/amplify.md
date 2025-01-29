@@ -28,3 +28,5 @@ Basically:
 - Add your repository as the source and pick the main branch as the branch it will build from (and maybe think about in the future not just using the main branch for everything, but only using it for your production ready code)
   - I already did the step on our shared AWS account to authorize our GitHub Organization (IHCCCloudDevOps). As long as your repo is in there, it should populate just fine.
   - If you have your frontend code in a subdirectory and not the root directory of the repo, then check the box for `monobuild` and type the name of that subdirectory.
+  - Verify the details are correct on the next page (should auto detect nextJS as framework and `.next` as build directory. Save and Deploy.
+  - After deploy is finished, you should be able to hit the provided URL and see your site live! Any pushes to the main branch will kick off another build/deploy on AWS.
