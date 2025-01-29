@@ -5,6 +5,8 @@ Amplify is an AWS frontend serverless service that allows us to host server-side
 Rather than pay a set monthly fee for an EC2 instance running a web server, Amplify charges only for build time (every time you make changes to your website and it has to build and deploy a new version) and requests. 
 This results in a very affordable website hosting service for low-traffic apps. 
 
+TODO: Next time, maybe set up a new repo for front-end and use starter code to initialize NextJS with Amplify?
+
 ## Deploying Amplify Resource using Terraform
 
 The [AWS terraform provider does include an Amplify resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/amplify_app), but GitHub actions doesn't seem to play nice with this right now.
