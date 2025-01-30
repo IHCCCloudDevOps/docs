@@ -5,16 +5,21 @@ Amplify is an AWS frontend serverless service that allows us to host server-side
 Rather than pay a set monthly fee for an EC2 instance running a web server, Amplify charges only for build time (every time you make changes to your website and it has to build and deploy a new version) and requests. 
 This results in a very affordable website hosting service for low-traffic apps. 
 
-TODO: Next time, maybe set up a new repo for front-end and use starter code to initialize NextJS with Amplify?
+## Setup project for Amplify
 
-## Deploying Amplify Resource using Terraform
+We want Amplify Gen 2 (that's the latest). For that, follow these setup instructions for our existing NextJS project - https://docs.amplify.aws/nextjs/start/manual-installation/
+
+This involves running `npm create amplify@latest` in your existing project directory. Let it do it's magic. We will use some of these files later as scaffolding for authentication and backend services.
+
+
+## Deploying Amplify Resource using Terraform (👎)
 
 The [AWS terraform provider does include an Amplify resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/amplify_app), but GitHub actions doesn't seem to play nice with this right now.
 We should be able to use the `access_token` parameter to give AWS access, but there are currently issues with this. (see the following error below and Google bugs)
 `
 Error: creating Amplify App (blippy-social-app): operation error Amplify: CreateApp, https response error StatusCode: 400, RequestID: 0ba70130-9fb6-4c0f-8862-1fc92bf498ce, BadRequestException: There was an issue setting up your repository. Please try again later.({"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/webhooks#list-repository-webhooks","status":"404"})
 `
-## Deploy using Amplify Pipeline
+## Deploy using Amplify Pipeline (👍)
 
 AWS Amplify offers a build pipeline that you can configure from the AWS console and connect to your GitHub repo. When a new push is detected on the configured branch, the code will be pulled, built, and deployed automatically. We will do this until I can get the Terraform/GitHub Actions working.
 
