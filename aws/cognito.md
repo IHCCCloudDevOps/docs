@@ -25,4 +25,21 @@ Basic steps:
       })
    ```
 3. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
-4. 
+4. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server.
+
+```js
+import { Authenticator } from "@aws-amplify/ui-react";
+
+...
+
+<Authenticator >
+      {({ signOut, user }) => (
+         // JSX inside this callback function only displays when user is authenticated. Otherwise, it displays the built-in sign-in interface
+          <div>
+              <h1>Welcome {user?.username}</h1>
+              <button><Link href={'/post'}>Make a new post</Link></button>
+              <button onClick={signOut}>Sign out</button>
+          </div>
+      )}
+</Authenticator>
+```
