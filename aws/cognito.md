@@ -25,7 +25,7 @@ Basic steps:
       })
    ```
 3. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
-4. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server.
+4. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. Read more here: https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/
 
 ```js
 import { Authenticator } from "@aws-amplify/ui-react";
@@ -43,3 +43,5 @@ import { Authenticator } from "@aws-amplify/ui-react";
       )}
 </Authenticator>
 ```
+5. To create a sign-up page (registration) use the `signUp` function and send the required form data to the function. This is all stored on AWS side securely, do you don't need to worry about the management and cannot see users passwords. Read more here: https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/sign-up/
+6. Continue to use the `@aws-amplify/auth` package to build out user sign-up and sign-in, and block out features until a user is signed in.
