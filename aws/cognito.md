@@ -26,7 +26,8 @@ Basic steps:
       })
    ```
 4. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
-5. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. [Read more here:](https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/)
+5. Add this import to your `layout.tsx` file to add the CSS that will style the Amplify Auth components: `import '@aws-amplify/ui/dist/styles.css';`
+6. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. [Read more here:](https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/)
 
 ```js
 import { Authenticator } from "@aws-amplify/ui-react";
