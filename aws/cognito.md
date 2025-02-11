@@ -6,11 +6,12 @@ By using AWS Cognito you are tapping into a secure solution for user management 
 
 ## Setting up Amazon Cognito with Amplify
 
-Follow this guide in the docs to setup `Amplify Auth` which uses `Amazon Cognito` behind the scenes: https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/
+[Follow this guide in the docs to setup `Amplify Auth` which uses `Amazon Cognito` behind the scenes](https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/)
 
 Basic steps:
-1. Make sure you have run `amplify init` in your project if you haven't already (https://docs.amplify.aws/nextjs/start/manual-installation/)
-2. Create a `amplify/auth/resource.ts` file and add the basic auth (with email, as an example but you can choose other login options. See docs for more detail)
+1. Install Amplify CLI if you haven't already: `npm install -g @aws-amplify/cli`
+2. [Make sure you have run `amplify init` in your project if you haven't already](https://docs.amplify.aws/nextjs/start/manual-installation/)
+3. Create a `amplify/auth/resource.ts` file and add the basic auth (with email, as an example but you can choose other login options. See docs for more detail)
    ```js
          import { defineAuth } from "@aws-amplify/backend"
       
@@ -24,8 +25,8 @@ Basic steps:
         },
       })
    ```
-3. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
-4. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. Read more here: https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/
+4. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
+5. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. [Read more here:](https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/)
 
 ```js
 import { Authenticator } from "@aws-amplify/ui-react";
