@@ -6,12 +6,11 @@ By using AWS Cognito you are tapping into a secure solution for user management 
 
 ## Setting up Amazon Cognito with Amplify
 
-[Follow this guide in the docs to setup `Amplify Auth` which uses `Amazon Cognito` behind the scenes](https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/)
-
 Basic steps:
 1. Install Amplify CLI if you haven't already: `npm install -g @aws-amplify/cli`
-2. [Make sure you have run `amplify init` in your project if you haven't already](https://docs.amplify.aws/nextjs/start/manual-installation/)
-3. Create a `amplify/auth/resource.ts` file and add the basic auth (with email, as an example but you can choose other login options. See docs for more detail)
+2. [Make sure you have run `npm create amplify@latest` in your project if you haven't already](https://docs.amplify.aws/nextjs/start/manual-installation/)
+3. [Follow this guide in the docs to setup `Amplify Auth` which uses `Amazon Cognito` behind the scenes](https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/) The steps in this guide are also outlined below:
+4. Create a `amplify/auth/resource.ts` file and add the basic auth (with email, as an example but you can choose other login options. See docs for more detail)
    ```js
          import { defineAuth } from "@aws-amplify/backend"
       
@@ -25,9 +24,9 @@ Basic steps:
         },
       })
    ```
-4. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
-5. Add this import to your `layout.tsx` file to add the CSS that will style the Amplify Auth components: `import '@aws-amplify/ui/dist/styles.css';`
-6. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. [Read more here:](https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/)
+5. run `npx ampx sandbox` (this requires you to have fresh keys in your aws config file)
+6. Add this import to your `layout.tsx` file to add the CSS that will style the Amplify Auth components: `import '@aws-amplify/ui/dist/styles.css';`
+7. Now you can use `Authenticator` from `@aws-amplify` package to wrap components in conditional authentication against the server. [Read more here:](https://docs.amplify.aws/nextjs/build-a-backend/auth/connect-your-frontend/using-the-authenticator/)
 
 ```js
 import { Authenticator } from "@aws-amplify/ui-react";
